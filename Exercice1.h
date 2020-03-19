@@ -8,20 +8,16 @@
 #include <QApplication>
 #include <QWidget>
 #include <QPushButton>
-#include <QLCDNumber>
+#include <QProgressBar>
 #include <QSlider>
 
-
-class Exercice1 : public QWidget {
-Q_OBJECT
-
+class Exercice1 : public QWidget
+{
 public:
     Exercice1();
 
-public slots:
-    void changerLargeur(int largeur);
-
 private:
+    QProgressBar *m_progressbar;
     QSlider *m_slider;
 };
 
