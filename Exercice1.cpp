@@ -10,7 +10,7 @@ Exercice1::Exercice1() : QWidget()
     setFixedSize(200, 100);
 
     m_progressbar = new QProgressBar(this);
-    m_progressbar->setTextDirection(QProgressBar::Direction);
+    m_progressbar->setTextDirection(QProgressBar::TopToBottom);
     m_progressbar->move(50, 20);
 
     m_slider = new QSlider(Qt::Horizontal, this);
