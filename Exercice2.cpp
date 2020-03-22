@@ -26,7 +26,6 @@ Exercice2::Exercice2() : QWidget()
     m_bouton->setGeometry(75, 50, 150, 25);
     m_text = new QTextEdit("texte initial");
 
-
     QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText()));
 
 }
