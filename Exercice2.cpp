@@ -31,5 +31,5 @@ Exercice2::Exercice2() : QWidget()
 
 }
 void Exercice2::changerText(char text) {
-    setText(text);
+    m_bouton->setText(text);
 }
