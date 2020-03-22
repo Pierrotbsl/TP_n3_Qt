@@ -1,6 +1,5 @@
 #include <iostream>
 #include <QApplication>
-#include <QPushButton>
 #include "Exercice1.h"
 
 int main(int argc, char **argv)
