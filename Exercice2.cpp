@@ -30,6 +30,6 @@ Exercice2::Exercice2() : QWidget()
     QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText()));
 
 }
-void Exercice2::changerText(char text) {
+void Exercice2::changerText() {
     m_bouton->setText("Nouveau Texte");
 }
