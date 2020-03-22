@@ -18,7 +18,7 @@ public:
     Exercice2();
 
 public slots:
-    void changerText(char text);
+    void changerText();
 
 private:
     QPushButton *m_bouton;
