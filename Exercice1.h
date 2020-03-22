@@ -11,14 +11,15 @@
 #include <QProgressBar>
 #include <QSlider>
 
-class Exercice1 : public QWidget
-{
+class Exercice1 : public QWidget {
+
 public:
     Exercice1();
 
 private:
     QProgressBar *m_progressbar;
     QSlider *m_slider;
+
 };
 
 
