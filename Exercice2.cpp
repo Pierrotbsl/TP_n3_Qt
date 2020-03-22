@@ -23,7 +23,7 @@ Exercice2::Exercice2() : QWidget()
 
     m_bouton = new QPushButton("1er Titre", this);
     m_bouton->setFont(QFont("Comic Sans MS", 14));
-    m_bouton->move(110, 50);
+    m_bouton->setGeometry(75, 50, 150, 25);
     m_text = new QTextEdit("texte initial");
 
 
