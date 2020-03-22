@@ -27,7 +27,7 @@ Exercice2::Exercice2() : QWidget()
     m_text = new QTextEdit("texte initial");
 
 
-    QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText("Nouveau Text")));
+    QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText()));
 
 }
 void Exercice2::changerText(char text) {
