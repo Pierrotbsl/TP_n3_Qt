@@ -10,8 +10,9 @@ int main(int argc, char **argv)
     /*Exercice1 *fenetre1 = new Exercice1;
     fenetre->show();*/
 
-    Exercice2 *fenetre2 = new Exercice2;
+    Exercice2 * fenetre2 = new Exercice2;
     fenetre2->show();
+
 
     return app.exec();
 }

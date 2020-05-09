@@ -21,8 +21,11 @@ public slots:
     void changerText();
 
 private:
-    QPushButton *m_bouton;
-    QTextEdit *m_text;
+    QPushButton * m_bouton;
+    QTextEdit * m_text;
+
+    int i = 1;
+    QString texte;
 };
 
 

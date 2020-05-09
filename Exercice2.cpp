@@ -3,32 +3,40 @@
 //
 
 #include "Exercice2.h"
+#include <QApplication>
 #include <QWidget>
+#include <QDebug>
 #include <QPushButton>
 
 Exercice2::Exercice2() : QWidget()
 {
    //Question 1 :
-   /*setFixedSize(300, 150);
-
-    m_bouton = new QPushButton("Quitter", this);
-    m_bouton->setFont(QFont("Comic Sans MS", 14));
-    m_bouton->move(110, 50);
-
-    QObject::connect(m_bouton, SIGNAL(clicked()), qApp, SLOT(quit()));*/
+//   setFixedSize(300, 150);
+//
+//    m_bouton = new QPushButton("Quitter", this);
+//    m_bouton->setFont(QFont("Comic Sans MS", 14));
+//    m_bouton->move(110, 50);
+//
+//    QObject::connect(m_bouton, SIGNAL(clicked()), qApp, SLOT(quit()));
 
     //Question 2 :
 
-    setFixedSize(300, 150);
+    setFixedSize(300, 160);
 
-    m_bouton = new QPushButton("1er Titre", this);
+    m_bouton = new QPushButton("fils", this);
     m_bouton->setFont(QFont("Comic Sans MS", 14));
-    m_bouton->setGeometry(75, 50, 150, 25);
-    m_text = new QTextEdit("texte initial");
+    m_bouton->setGeometry(10, 10, 280, 25);
+
+    m_text = new QTextEdit("texte initial", this);
+    m_text->setGeometry(10, 40, 280, 110);
 
     QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText()));
 
 }
 void Exercice2::changerText() {
-    m_bouton->setText("Nouveau Texte");
+    texte = "Example" + QString::number(i);
+    m_bouton->setText(texte);
+    m_text->insertPlainText(texte + "\n");
+    qDebug() << texte;
+    i++;
 }
