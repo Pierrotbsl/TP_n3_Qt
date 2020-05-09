@@ -19,6 +19,7 @@ public:
 
 public slots:
     void changerText();
+    void ajouterExercice1();
 
 private:
     QPushButton * m_bouton;

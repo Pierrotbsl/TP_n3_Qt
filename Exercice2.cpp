@@ -3,6 +3,7 @@
 //
 
 #include "Exercice2.h"
+#include "Exercice1.h"
 #include <QApplication>
 #include <QWidget>
 #include <QDebug>
@@ -11,6 +12,7 @@
 Exercice2::Exercice2() : QWidget()
 {
    //Question 1 :
+
 //   setFixedSize(300, 150);
 //
 //    m_bouton = new QPushButton("Quitter", this);
@@ -21,16 +23,26 @@ Exercice2::Exercice2() : QWidget()
 
     //Question 2 :
 
-    setFixedSize(300, 160);
+//    setFixedSize(300, 160);
+//
+//    m_bouton = new QPushButton("fils", this);
+//    m_bouton->setFont(QFont("Comic Sans MS", 14));
+//    m_bouton->setGeometry(10, 10, 280, 25);
+//
+//    m_text = new QTextEdit("texte initial", this);
+//    m_text->setGeometry(10, 40, 280, 110);
+//
+//    QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText()));
 
-    m_bouton = new QPushButton("fils", this);
+    //Question 3 :
+
+    setFixedSize(300, 100);
+
+    m_bouton = new QPushButton("Afficher Exercice 1", this);
     m_bouton->setFont(QFont("Comic Sans MS", 14));
     m_bouton->setGeometry(10, 10, 280, 25);
 
-    m_text = new QTextEdit("texte initial", this);
-    m_text->setGeometry(10, 40, 280, 110);
-
-    QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(changerText()));
+    QObject::connect(m_bouton, SIGNAL(clicked()), this, SLOT(ajouterExercice1()));
 
 }
 void Exercice2::changerText() {
@@ -39,4 +51,9 @@ void Exercice2::changerText() {
     m_text->insertPlainText(texte + "\n");
     qDebug() << texte;
     i++;
+}
+
+void Exercice2::ajouterExercice1() {
+    Exercice1 * exo1 = new Exercice1;
+    exo1->show();
 }
